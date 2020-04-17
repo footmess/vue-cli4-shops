@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+	publicPath: '/abc',
 	//webpack配置
 	// see https://github.com/vuejs/vue-cli/blob/dev/docs/guide/webpack.md
 	chainWebpack: (config) => {

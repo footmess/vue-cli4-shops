@@ -2,8 +2,19 @@
 	<div class="about">
 		<h1>This is an about page</h1>
 		<p>This is an test cssnext p</p>
+		<router-link :to="{path:'abcefghijk/a'}" append tag="p" exact event="mouseup">abc</router-link>
 	</div>
 </template>
+<script>
+export default {
+	name:'About',
+	data() {
+		return {
+			ah:'jk'
+		}
+	}
+}
+</script>
 <style lang="postcss" scoped>
 :root {
  --text-color: black;
