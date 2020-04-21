@@ -1,0 +1,24 @@
+.custom-link-active {
+	color: red;
+	font-size: 20px;
+	border-bottom: 2px solid blue;
+	text-decoration: none;
+}
+html {
+	background-color: #333;
+}
+.app-loading {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	max-width: 640px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+	background-color: #80bd01;
+}

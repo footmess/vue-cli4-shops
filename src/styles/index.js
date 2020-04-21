@@ -1,2 +1,2 @@
-import "./custom/common.css";
-import "./custom/reset.css";
+import './common.css';
+import './reset.css';
