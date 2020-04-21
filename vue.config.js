@@ -1,7 +1,10 @@
 const path = require('path');
 
 module.exports = {
-	publicPath: '/abc',
+	publicPath: '/',
+	productionSourceMap: false,
+	filenameHashing: false,
+	lintOnSave: process.env.NODE_ENV !== 'production',
 	//webpack配置
 	// see https://github.com/vuejs/vue-cli/blob/dev/docs/guide/webpack.md
 	chainWebpack: (config) => {
@@ -67,5 +70,12 @@ module.exports = {
 		// }
 		//是否启用css module for all css/pre-processor files
 		// requireModuleExtension: false
+	},
+	devServer: {
+		proxy: {
+			path: '/api/*',
+			target: 'https://cnode.org',
+			host: 'cnode.org'
+		}
 	}
 };
