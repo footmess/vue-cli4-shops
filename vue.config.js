@@ -1,15 +1,16 @@
 const path = require('path');
 
 module.exports = {
-	publicPath: '/',
+	// publicPath: '/',
 	productionSourceMap: false,
-	filenameHashing: false,
+	filenameHashing: true,
 	lintOnSave: process.env.NODE_ENV !== 'production',
 	//webpack配置
 	// see https://github.com/vuejs/vue-cli/blob/dev/docs/guide/webpack.md
 	chainWebpack: (config) => {
 		config.plugins.delete('prefetch');
 		config.module.rule('pug').test(/\.pug/).use('pug-html-loader').loader('pug-html-loader').end();
+		// 默认设置的别名
 		// config.resolve.alias.set('@assets', 'src/assets');
 	},
 	configureWebpack: (config) => {
@@ -73,9 +74,10 @@ module.exports = {
 	},
 	devServer: {
 		proxy: {
-			path: '/api/*',
-			target: 'https://cnode.org',
-			host: 'cnode.org'
+			'/api/*': {
+				target: 'https://cnode.org',
+				host: 'cnode.org'
+			}
 		}
 	}
 };
