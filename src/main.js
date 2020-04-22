@@ -6,6 +6,7 @@ import './plugins';
 import http from './plugins/axios';
 import i18n from './i18n';
 import '@/styles/index.js';
+import './utils/getFirstScreen';
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = http;

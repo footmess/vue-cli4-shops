@@ -2,10 +2,6 @@
 <html lang="en">
 
 <head>
-  <script>
-    // 记录页面初始化时间
-    const STARTLOAD = new Date()
-  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
@@ -14,36 +10,23 @@
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <!-- <link rel="stylesheet" href="<%= BASE_URL %>src/style/common.css"> -->
   <title><%= htmlWebpackPlugin.options.title %></title>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
 </head>
 
 <body>
   <script>
     // 记录页面初始化时间
     const PAGE_START_TIME = new Date()
-    console.log(PAGE_START_TIME - STARTLOAD)
   </script>
   <noscript>
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
       Please enable it to continue.</strong>
   </noscript>
-  <div class="app-loading">
-    <div class="box">
-      <div class="line-spin-fade-loader">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <h2>vue-cnode</h2>
-      <p>中国最专业的Node.j开源社区</p>
-    </div>
-  </div>
   <div id="app"></div>
   <!-- built files will be auto injected -->
+  <script>
+    console.log({ wx })
+  </script>
 </body>
 
 </html>
