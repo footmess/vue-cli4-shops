@@ -1,5 +1,10 @@
 <template>
 	<div id="app">
+		<div
+			class="custom-style bg-gray-200 min-h-screen p-8 flex items-center justify-center"
+		>
+			<div class="box-border md:box-content">12351515</div>
+		</div>
 		<!-- <div id="nav">
 			<router-link to="/" exact>Home</router-link> |
 			<router-link to="/about" append exact>About</router-link> |
@@ -27,6 +32,9 @@ export default {
 	data() {
 		return {}
 	},
+	mounted() {
+		console.log({ performanceB: performance.now() })
+	}
 }
 </script>
 
@@ -50,5 +58,8 @@ export default {
 
 #nav a.router-link-exact-active {
 	color: #42b983;
+}
+.custom-style {
+	color: red;
 }
 </style>

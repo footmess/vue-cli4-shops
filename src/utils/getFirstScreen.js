@@ -1,7 +1,6 @@
 (() => {
 	// dom时间
 	var targetNode = document.body;
-	console.log(targetNode);
 	var observerOptions = {
 		// 观察目标子节点的变化
 		childList: true,
@@ -22,7 +21,6 @@
 	};
 	var observer = new MutationObserver(callback);
 	observer.observe(targetNode, observerOptions);
-	console.log({ store });
 
 	function computedDomNuM(e, n, t) {
 		var i = 0,
@@ -114,5 +112,4 @@
 		})
 	);
 	// 所有图片的responseEnd时间跟计算的fmp相比较得出最大值
-	console.log(max);
 })();
