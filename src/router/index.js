@@ -12,8 +12,24 @@ const routes = [
 		component: Home
 	},
 	{
+		path: '/index',
+		name: 'Index',
+		// {}外面加上()表示这是一个对象而不是代码块
+		props: (route) => ({
+			queryA: route.query.tab,
+			custom: 123,
+			pathName: route.name
+		}),
+		component: () => import(/* webpackChunkName: "Index" */ '../views/Index.vue')
+	},
+	{
 		path: '/topic/create',
-		name: 'About',
+		name: 'TopicCreate',
+		props: (route) => ({
+			queryA: route.query.tab,
+			custom: 123,
+			pathName: route.name
+		}),
 		// route level code-splitting
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
@@ -22,26 +38,51 @@ const routes = [
 	{
 		path: '/topic/:id',
 		name: 'Topic',
+		props: (route) => ({
+			queryA: route.query.tab,
+			custom: 123,
+			pathName: route.name
+		}),
 		component: () => import(/* webpackChunkName: "create" */ '../views/Topic.vue')
 	},
 	{
 		path: '/my/messages',
 		name: 'Message',
+		props: (route) => ({
+			queryA: route.query.tab,
+			custom: 123,
+			pathName: route.name
+		}),
 		component: () => import(/* webpackChunkName: "message" */ '../views/Message.vue')
 	},
 	{
 		path: '/user/info',
 		name: 'Info',
+		props: (route) => ({
+			queryA: route.query.tab,
+			custom: 123,
+			pathName: route.name
+		}),
 		component: () => import(/* webpackChunkName: "Info" */ '../views/Info.vue')
 	},
 	{
 		path: '/login',
 		name: 'Login',
+		props: (route) => ({
+			queryA: route.query.tab,
+			custom: 123,
+			pathName: route.name
+		}),
 		component: () => import(/* webpackChunkName: "Login" */ '../views/Login.vue')
 	},
 	{
 		path: '/logout',
 		name: 'Logout',
+		props: (route) => ({
+			queryA: route.query.tab,
+			custom: 123,
+			pathName: route.name
+		}),
 		component: () => import(/* webpackChunkName: "Logout" */ '../views/Logout.vue')
 	},
 	{

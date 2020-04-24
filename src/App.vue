@@ -1,23 +1,12 @@
 <template>
 	<div id="app">
-		<div
+		<!-- <div
 			class="custom-style bg-gray-200 min-h-screen p-8 flex items-center justify-center"
 		>
 			<div class="box-border md:box-content">12351515</div>
-		</div>
-		<!-- <div id="nav">
-			<router-link to="/" exact>Home</router-link> |
-			<router-link to="/about" append exact>About</router-link> |
-			<router-link
-				to="/foo"
-				v-slot="{ href, route, navigate, isActive, isExactActive }"
-				exact
-			>
-				<li :class="[isActive, isExactActive]">
-					<a :href="href" @click="navigate">{{ route.fullPath }}</a>
-				</li>
-			</router-link>
 		</div> -->
+		<!-- <keep-alive> 是用在其一个直属的子组件被开关的情形 
+			如果你在其中有 v-for 则不会工作 -->
 		<transition>
 			<keep-alive>
 				<router-view />
@@ -43,8 +32,18 @@ export default {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	max-width: 640px;
+	margin: auto;
+	font-size: 13px;
+	background: #fff;
+	-webkit-tap-highlight-color: transparent;
 }
 
 #nav {

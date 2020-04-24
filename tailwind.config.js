@@ -5,4 +5,3 @@ module.exports = {
 		boxSizing: [ 'responsive', 'hover', 'focus' ]
 	}
 };
-Dis;

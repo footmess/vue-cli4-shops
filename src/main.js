@@ -5,6 +5,7 @@ import store from './store';
 import './plugins';
 import http from './plugins/axios';
 import i18n from './i18n';
+import 'normalize.css';
 import '@/styles/index.js';
 import './utils/getFirstScreen';
 
