@@ -22,7 +22,7 @@ export default {
 					this.num--
 				} else {
                     clearInterval(setIntervalID)
-                    this.$router.push({ path: '/' })
+                    this.$router.push({ name: 'Index' })
 					return
 				}
 			}, 1000)

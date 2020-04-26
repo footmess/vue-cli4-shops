@@ -20,7 +20,8 @@ http.interceptors.request.use(
 http.interceptors.response.use((res) => {
 	if (res.status === 200) {
 		const data = res.data;
-		if (data.code === 0) {
+		// if (data.code === 0) {
+		if (data.success) {
 			return data.data;
 		} else {
 			Message({

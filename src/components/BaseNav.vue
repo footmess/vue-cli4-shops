@@ -19,7 +19,8 @@
 export default {
 	props: {
 		query: {
-			type: String
+			type: String,
+			default: 'all'
 		}
 	},
 	data() {
