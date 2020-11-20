@@ -1,17 +1,15 @@
 <template>
-  <div>{{msg}}</div>
+  <div>{{ msg }}</div>
 </template>
 
 <script>
 export default {
-    data(){
-        return {
-            msg: 'topic'
-        }
-    }
-}
+  data() {
+    return {
+      msg: "topic"
+    };
+  }
+};
 </script>
 
-<style lang="sass" scoped>
-
-</style>
+<style lang="sass" scoped></style>

@@ -1,7 +1,7 @@
 module.exports = {
-	variants: {
-		// ...
-		// -   boxSizing: ['responsive'],
-		boxSizing: [ 'responsive', 'hover', 'focus' ]
-	}
+  variants: {
+    // ...
+    // -   boxSizing: ['responsive'],
+    boxSizing: ["responsive", "hover", "focus"]
+  }
 };

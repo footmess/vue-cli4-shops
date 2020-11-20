@@ -1,8 +1,8 @@
 module.exports = {
-	index: {
-		title: 'Home'
-	},
-	list: {
-		item: 'List'
-	}
+  index: {
+    title: "Home"
+  },
+  list: {
+    item: "List"
+  }
 };
